@@ -15,7 +15,7 @@ SyntaxHighlighter.registerLanguage("bash", bash);
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("javascript", javascript);
 
-let url = "";
+let url = "https://suno-radio.onrender.com";
 
 // TODO Player requires a trackList with at least 3 elements
 // TODO Player remove time / slider for infinite audio
