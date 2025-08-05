@@ -14,6 +14,6 @@ RUN go build -x -v -trimpath -ldflags "-s -w" -buildvcs=false -o /usr/local/bin/
 FROM gcr.io/distroless/base-debian12:nonroot
 COPY --from=builder /usr/local/bin/suno-radio /usr/local/bin/suno-radio
 ENV RPC_ADDR=""
-ENTRYPOINT ["/usr/local/bin/suno-radio"]
-CMD ["-config", "/home/nonroot/suno-radio/server.yml", "-rpc", ""]
+# Ändere das hier:
+CMD ["/usr/local/bin/suno-radio", "-config", "/home/nonroot/suno-radio/server.yml", "-rpc", ""]
 HEALTHCHECK --interval=2s --timeout=30s CMD ["/usr/local/bin/suno-radio", "-healthcheck", "http://127.0.0.1:3000,http://127.0.0.1:7890"]
